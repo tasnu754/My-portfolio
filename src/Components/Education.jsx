@@ -2,7 +2,7 @@ import { MdCastForEducation } from "react-icons/md";
 
 const Education = () => {
   return (
-    <div className="mt-20 space-y-10">
+    <div className="mt-36 space-y-10">
       <h2 className="text-4xl text-center font-bold  text-[#0ef]">Education</h2>
       <div className="mt-6">
         <div className=" md:text-2xl">

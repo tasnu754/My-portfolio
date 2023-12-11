@@ -72,7 +72,7 @@ const Header = () => {
           </a>
         </div>
         <div className="pt-2">
-          <button className="btn-nav ">Resume</button>
+          <button className="btn-nav ">Download Resume</button>
         </div>
       </div>
       <div className="w-[250px] h-[250px] mx-auto my-10 md:w-[400px] md:h-[400px] rounded-full overflow-hidden">
