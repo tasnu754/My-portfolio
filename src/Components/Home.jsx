@@ -2,6 +2,7 @@ import AboutMe from "./AboutMe";
 import Education from "./Education";
 import Header from "./Header";
 import Navbar from "./Navbar";
+import Skills from "./Skills";
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
           <Header></Header>
                 <AboutMe></AboutMe>
                 <Education></Education>
+                <Skills></Skills>
         </div>
       </div>
     );
