@@ -15,20 +15,20 @@ const Navbar = () => {
           </a>
         </div>
 
-        <nav className="space-x-4 pt-4 md:pt-0 md:space-x-6  lg:space-x-10 text-[#fff] hover:text-[#0ef] md:text-2xl font-bold ransition-all duration-300 ease-in-out">
-          <a href="#" className="inline-block">
+        <nav className="space-x-4 pt-4 md:pt-0 md:space-x-6  lg:space-x-10 text-[#fff]  md:text-2xl font-bold ransition-all duration-300 ease-in-out">
+          <a href="#home" className="inline-block hover:text-[#0ef]">
             Home
           </a>
-          <a href="#" className="inline-block">
+          <a href="#about" className="inline-block hover:text-[#0ef]">
             About
           </a>
-          <a href="#" className="inline-block">
+          <a href="#skills" className="inline-block hover:text-[#0ef]">
             Skills
           </a>
-          <a href="#" className="inline-block">
+          <a href="#projects" className="inline-block hover:text-[#0ef]">
             Porjects
           </a>
-          <a href="#" className="inline-block">
+          <a href="#contact" className="inline-block hover:text-[#0ef]">
             Contact
           </a>
         </nav>

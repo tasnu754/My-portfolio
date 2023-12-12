@@ -28,7 +28,7 @@ const Header = () => {
     };
   }, []); 
   return (
-    <div className="relative lg:flex gap-24 items-center w-full lg:h-[100vh] ">
+    <div className="relative lg:flex gap-24 items-center w-full lg:h-[100vh] pt-10 " id="home">
       <div className="lg:max-w-[700px] space-y-4">
         <h3 className="text-2xl">Hello, It&apos;s me</h3>
         <h1
