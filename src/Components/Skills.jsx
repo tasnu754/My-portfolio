@@ -6,6 +6,7 @@ import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
 
 
 const Skills = () => {
@@ -24,7 +25,7 @@ const Skills = () => {
                 <FaHtml5 className="text-[#0ef]"></FaHtml5>HTML
               </div>
               <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-                <div className="flex items-center justify-center w-[90%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+                <div className="flex items-center justify-center w-[90%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
                   90%
                 </div>
               </div>
@@ -34,7 +35,7 @@ const Skills = () => {
                 <FaCss3Alt className="text-[#0ef]"></FaCss3Alt>CSS
               </div>
               <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-                <div className="flex items-center justify-center w-[85%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+                <div className="flex items-center justify-center w-[85%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
                   85%
                 </div>
               </div>
@@ -45,7 +46,7 @@ const Skills = () => {
                 CSS
               </div>
               <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-                <div className="flex items-center justify-center w-[95%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+                <div className="flex items-center justify-center w-[95%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
                   95%
                 </div>
               </div>
@@ -56,7 +57,7 @@ const Skills = () => {
                 JavaScript
               </div>
               <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-                <div className="flex items-center justify-center w-[90%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+                <div className="flex items-center justify-center w-[90%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
                   90%
                 </div>
               </div>
@@ -66,7 +67,7 @@ const Skills = () => {
                 <FaReact className="text-[#0ef]"></FaReact>React JS
               </div>
               <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-                <div className="flex items-center justify-center w-[90%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+                <div className="flex items-center justify-center w-[90%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
                   90%
                 </div>
               </div>
@@ -80,17 +81,17 @@ const Skills = () => {
                 <FaNode className="text-[#0ef] text-5xl"></FaNode>Node Js
               </div>
               <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-                <div className="flex items-center justify-center w-[85%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+                <div className="flex items-center justify-center w-[85%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
                   85%
                 </div>
               </div>
             </div>
             <div className="pt-10 space-y-4 w-full ">
               <div className="flex items-center gap-2 text-2xl font-bold">
-                <SiMongodb className="text-[#0ef]"></SiMongodb>Express Js
+                <SiExpress className="text-[#0ef]"></SiExpress>Express Js
               </div>
               <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-                <div className="flex items-center justify-center w-[85%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+                <div className="flex items-center justify-center w-[85%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
                   85%
                 </div>
               </div>
@@ -101,7 +102,7 @@ const Skills = () => {
                 MongoDB
               </div>
               <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-                <div className="flex items-center justify-center w-[80%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+                <div className="flex items-center justify-center w-[80%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
                   80%
                 </div>
               </div>
@@ -112,7 +113,7 @@ const Skills = () => {
                 MySQL
               </div>
               <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-                <div className="flex items-center justify-center w-[50%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+                <div className="flex items-center justify-center w-[50%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
                   50%
                 </div>
               </div>
@@ -125,7 +126,7 @@ const Skills = () => {
             Data Structures
           </div>
           <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-            <div className="flex items-center justify-center w-[70%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+            <div className="flex items-center justify-center w-[70%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
               70%
             </div>
           </div>
@@ -135,7 +136,7 @@ const Skills = () => {
             Java Language (Object Oriented Programming)
           </div>
           <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-            <div className="flex items-center justify-center w-[70%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+            <div className="flex items-center justify-center w-[70%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
               70%
             </div>
           </div>
@@ -145,7 +146,7 @@ const Skills = () => {
             C++ Language
           </div>
           <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-            <div className="flex items-center justify-center w-[60%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+            <div className="flex items-center justify-center w-[60%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
               60%
             </div>
           </div>
@@ -155,7 +156,7 @@ const Skills = () => {
             C Language
           </div>
           <div className="flex border-2 border-black w-full h-6 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
-            <div className="flex items-center justify-center w-[80%] h-full overflow-hidden text-black break-all bg-[#0ef] rounded-full">
+            <div className="flex items-center justify-center w-[80%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">
               80%
             </div>
           </div>

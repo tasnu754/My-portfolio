@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
+import { FiGithub } from "react-icons/fi";
+import { FaDownload } from "react-icons/fa6";
 import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -28,8 +30,11 @@ const Header = () => {
     };
   }, []); 
   return (
-    <div className="relative lg:flex gap-24 items-center w-full lg:h-[100vh] pt-10 " id="home">
-      <div className="lg:max-w-[700px] space-y-4">
+    <div
+      className="relative xl:flex gap-24 items-center w-full xl:h-[100vh] pt-10 "
+      id="home"
+    >
+      <div className="xl:max-w-[700px] space-y-4">
         <h3 className="text-2xl">Hello, It&apos;s me</h3>
         <h1
           data-aos="fade-right"
@@ -42,10 +47,11 @@ const Header = () => {
           And I&apos;m a <span className="text text-[#0ef]"></span>
         </h3>
         <p className="text-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, fuga
-          accusamus, voluptates exercitationem optio reiciendis architecto vitae
-          mollitia quos, tenetur aliquid. Quae quasi nihil, dolorem repellendus
-          molestias numquam eaque nesciunt?
+          I embarked on my web development journey with a solid foundation in
+          HTML, CSS, and JavaScript. As I delved deeper, I honed my skills in
+          React and mastered the art of building modern, responsive user
+          interfaces. On the backend, I specialize in Node.js and Express.js,
+          and my data management skills extend to MongoDB.
         </p>
 
         <div
@@ -53,29 +59,52 @@ const Header = () => {
           className="flex justify-start items-center gap-2 text-2xl transparent "
         >
           <a
-            href="#"
+            href="https://www.facebook.com/tasnuva.marziya"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-[45px] h-[45px]  flex justify-center items-center rounded-full border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
           >
             <FaFacebookF></FaFacebookF>
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/tasnuva-islam-mila-2105462a4"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-[45px] h-[45px] flex justify-center items-center rounded-full border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
           >
             <FaLinkedinIn></FaLinkedinIn>
           </a>
           <a
-            href="#"
+            href="https://github.com/tasnu754"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" w-[45px] h-[45px] flex justify-center items-center rounded-full border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
+          >
+            <FiGithub></FiGithub>
+          </a>
+          <a
+            href="https://www.instagram.com/tasnuva_marziya"
+            target="_blank"
+            rel="noopener noreferrer"
             className=" w-[45px] h-[45px] flex justify-center items-center rounded-full border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
           >
             <SiInstagram></SiInstagram>
           </a>
         </div>
         <div className="pt-2">
-          <button className="btn-nav ">Download Resume</button>
+          <a
+            href="https://drive.google.com/uc?export=download&id=17wLfziaCMT50GQX_9RVoYrtp2bbZGiFn"
+            download={"Tasnuva_Islam_Resume.pdf"}
+          >
+          
+            <button className="btn-nav ">
+              <FaDownload className="inline"></FaDownload> Download Resume
+            </button>
+          </a>
+          
         </div>
       </div>
-      <div className="w-[250px] h-[250px] mx-auto my-10 md:w-[400px] md:h-[400px] rounded-full overflow-hidden">
+      <div className="w-[250px] h-[250px] mx-auto my-10 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden">
         <img
           className="w-full h-full object-cover"
           src="https://i.ibb.co/f2wj0WV/Neon-Blue-and-Black-Gamer-Badge-Logo.png"

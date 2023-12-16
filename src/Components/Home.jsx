@@ -10,7 +10,7 @@ const Home = () => {
     return (
       <div>
         <Navbar></Navbar>
-        <div className="w-[90%] lg:w-[80%] mx-auto pb-10 scroll-smooth">
+        <div className="w-[90%]   mx-auto pb-10 scroll-smooth">
           <Header></Header>
           <AboutMe></AboutMe>
           <Education></Education>

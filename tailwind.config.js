@@ -8,7 +8,11 @@ export default {
     extend: {
       fontFamily: {
          roboto: "'Roboto Slab', serif", // Adds a new `font-roboto` class 
-        Raleway: "'Playfair Display', serif", // Adds a new `font-Raleway` class
+        Raleway: "'Playfair Display', serif",  // Adds a new `font-Raleway` class
+        afacad: " 'Afacad', sans-serif",
+        robotos: "'Roboto Condensed', sans-serif",
+        noto: "'Noto Serif', serif"
+
       }},
   },
   plugins: [require("daisyui")],
