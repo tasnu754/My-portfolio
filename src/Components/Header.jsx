@@ -46,10 +46,10 @@ const Header = () => {
           And I&apos;m a <span className="text text-[#0ef]"></span>
         </h3>
         <p className="text-xl">
-          With expertise in React and Next.js. My skills also extend to the
-          backend, where I&apos;m proficient with Node.js, Express.js, MongoDB,
-          and MySQL. I have a strong foundation in building modern, responsive
-          user interfaces.
+          With expertise in React, Redux and Next.js. My skills also extend to
+          the backend, where I&apos;m proficient with Node.js, Express.js,
+          MongoDB, and MySQL. I have a strong foundation in building modern,
+          responsive user interfaces.
         </p>
 
         <div

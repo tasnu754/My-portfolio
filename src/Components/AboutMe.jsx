@@ -26,10 +26,10 @@ const AboutMe = () => {
           I am a recent BSc in Computer Science and Engineering graduate.
           I&apos;ve spent the last two years actively building my skills to
           become a full-stack web developer. I have a strong foundation in
-          modern front-end development, specializing in React, Tailwind CSS,
-          Bootstrap, and Material-UI, while my back-end expertise covers
-          Next.js, Node.js, and Express.js along with experience in databases
-          like MongoDB and MySQL.
+          modern front-end development, specializing in React, Redux Toolkit,
+          Tailwind CSS, Bootstrap, and Material-UI, while my back-end expertise
+          covers Next.js, Node.js, and Express.js along with experience in
+          databases like MongoDB and MySQL.
         </p>
         <div className="flex lg:gap-10">
           <div className="pt-10 space-y-4 text-sm lg:text-xl text-[#0ef]">
