@@ -79,7 +79,11 @@ const Skills = () => {
             </h3>
             <div className="pt-10 space-y-4 w-full ">
               <div className="flex  gap-2 text-2xl font-bold">
-                <FaNode className="text-[#0ef] text-5xl"></FaNode>Next Js
+                <img
+                  src="../../public/Nextjs_Icon.png"
+                  className="text-[#0ef] h-7"
+                ></img>
+                Next Js
               </div>
               <div className="flex border-2 border-black w-full h-5 overflow-hidden font-sans text-xs font-medium rounded-full flex-start bg-blue-gray-50">
                 <div className="flex  justify-center w-[85%] h-full overflow-hidden text-black break-all bg-gray-300 rounded-full">

@@ -91,9 +91,10 @@ const Header = () => {
         </div>
         <div className="pt-2">
           <a
-            href="https://drive.google.com/uc?export=download&id=17wLfziaCMT50GQX_9RVoYrtp2bbZGiFn"
+            href="https://drive.google.com/uc?export=download&id=19ndrC5yyEoT3wZoiycc6FrsjtIcxyL2v"
             download={"Tasnuva_Islam_Resume.pdf"}
           >
+            {/* https://drive.google.com/file/d/19ndrC5yyEoT3wZoiycc6FrsjtIcxyL2v/view?usp=sharing */}
             <button className="btn-nav ">
               <FaDownload className="inline"></FaDownload> Download Resume
             </button>
