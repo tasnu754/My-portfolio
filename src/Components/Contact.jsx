@@ -54,7 +54,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-start items-center gap-2 text-2xl transparent ">
           <a
-            href="https://www.facebook.com/tasnuva.marziya"
+            href="https://www.facebook.com/tasnuva.islam4"
             target="_blank"
             rel="noopener noreferrer"
             className="w-[35px] h-[35px]  flex justify-center items-center rounded-md border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
@@ -78,7 +78,7 @@ const Contact = () => {
             <FiGithub></FiGithub>
           </a>
           <a
-            href="https://www.instagram.com/tasnuva_marziya"
+            href="https://www.instagram.com/tasnuva_islam754/"
             target="_blank"
             rel="noopener noreferrer"
             className=" w-[35px] h-[35px] flex justify-center items-center rounded-md border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"

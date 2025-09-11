@@ -63,7 +63,11 @@ body {
 
 
 
-                   
+          @media (max-width: 369px) {
+            .custom {
+              padding-top: 19px;
+            }
+          }
          
 
           

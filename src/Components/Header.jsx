@@ -6,29 +6,28 @@ import { FiGithub } from "react-icons/fi";
 import { FaDownload } from "react-icons/fa6";
 import Typed from "typed.js";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css";
+import profilePic from "/profile-pic (4).png";
 
 AOS.init();
 
-// https://i.ibb.co/f2wj0WV/Neon-Blue-and-Black-Gamer-Badge-Logo.png 
+// https://i.ibb.co/f2wj0WV/Neon-Blue-and-Black-Gamer-Badge-Logo.png
 // https://i.ibb.co/cYKJ5Dg/Web-Developer-Illustration-Facebook-Post.png
 
-
 const Header = () => {
-    useEffect(() => {
-    
+  useEffect(() => {
     var typed = new Typed(".text", {
       strings: ["Frontend Developer", "Mern Stack Developer", "Web Developer"],
       typeSpeed: 50,
       backSpeed: 50,
       backDelay: 500,
-      loop: true
+      loop: true,
     });
 
     return () => {
       typed.destroy();
     };
-  }, []); 
+  }, []);
   return (
     <div
       className="relative xl:flex gap-24 items-center w-full xl:h-[100vh] pt-10 "
@@ -47,11 +46,10 @@ const Header = () => {
           And I&apos;m a <span className="text text-[#0ef]"></span>
         </h3>
         <p className="text-xl">
-          I embarked on my web development journey with a solid foundation in
-          HTML, CSS, and JavaScript. As I delved deeper, I honed my skills in
-          React and mastered the art of building modern, responsive user
-          interfaces. On the backend, I specialize in Node.js and Express.js,
-          and my data management skills extend to MongoDB.
+          With expertise in React and Next.js. My skills also extend to the
+          backend, where I&apos;m proficient with Node.js, Express.js, MongoDB,
+          and MySQL. I have a strong foundation in building modern, responsive
+          user interfaces.
         </p>
 
         <div
@@ -59,7 +57,7 @@ const Header = () => {
           className="flex justify-start items-center gap-2 text-2xl transparent "
         >
           <a
-            href="https://www.facebook.com/tasnuva.marziya"
+            href="https://www.facebook.com/tasnuva.islam4"
             target="_blank"
             rel="noopener noreferrer"
             className="w-[45px] h-[45px]  flex justify-center items-center rounded-full border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
@@ -83,7 +81,7 @@ const Header = () => {
             <FiGithub></FiGithub>
           </a>
           <a
-            href="https://www.instagram.com/tasnuva_marziya"
+            href="https://www.instagram.com/tasnuva_islam754/"
             target="_blank"
             rel="noopener noreferrer"
             className=" w-[45px] h-[45px] flex justify-center items-center rounded-full border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
@@ -96,19 +94,19 @@ const Header = () => {
             href="https://drive.google.com/uc?export=download&id=17wLfziaCMT50GQX_9RVoYrtp2bbZGiFn"
             download={"Tasnuva_Islam_Resume.pdf"}
           >
-          
             <button className="btn-nav ">
               <FaDownload className="inline"></FaDownload> Download Resume
             </button>
           </a>
-          
         </div>
       </div>
       <div className="w-[250px] h-[250px] mx-auto my-10 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden">
         <img
           className="w-full h-full object-cover"
-          src="https://i.ibb.co/f2wj0WV/Neon-Blue-and-Black-Gamer-Badge-Logo.png"
+          src={profilePic}
           alt=""
+          // https://i.ibb.co/Jy1J7Td/profile-pic-4.png
+          // https://i.ibb.co/f2wj0WV/Neon-Blue-and-Black-Gamer-Badge-Logo.png
         />
       </div>
     </div>
