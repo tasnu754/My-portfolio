@@ -13,8 +13,8 @@ const AboutMe = () => {
       <div className=" lg:w-[510px] lg:h-[400px] xl:w-[600px] xl:h-[450px] mx-auto rounded-md ">
         <img
           className="w-full h-full object-cover"
-          // src="https://i.ibb.co/cYKJ5Dg/Web-Developer-Illustration-Facebook-Post.png"
-          src="../../public/Tasnuva_Cover.png"
+          src="https://i.ibb.co/cYKJ5Dg/Web-Developer-Illustration-Facebook-Post.png"
+          // src="../../public/Tasnuva_Cover.png"
           alt=""
         />
       </div>
