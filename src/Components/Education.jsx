@@ -8,7 +8,7 @@ const Education = () => {
         <div className=" md:text-3xl">
           <div className="flex items-center gap-2">
             <MdCastForEducation className=""></MdCastForEducation>
-            <p>BSC in Computer Science and Engineering</p>
+            <p>BSC in Computer Science Engineering</p>
           </div>
           <p>East West University (Feb 2022 - Sep 2025)</p>
         </div>
