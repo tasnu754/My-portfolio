@@ -7,7 +7,6 @@ import { FaDownload } from "react-icons/fa6";
 import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import profilePic from "/profile-pic (4).webp";
 
 AOS.init();
 
@@ -104,7 +103,7 @@ const Header = () => {
       <div className="w-[250px] h-[250px] mx-auto my-10 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden">
         <img
           className="w-full h-full object-cover"
-          src={profilePic}
+          src="/profile-pic (4).webp"
           alt=""
           // https://i.ibb.co/Jy1J7Td/profile-pic-4.png
           // https://i.ibb.co/f2wj0WV/Neon-Blue-and-Black-Gamer-Badge-Logo.png
