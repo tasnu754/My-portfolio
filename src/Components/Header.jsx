@@ -7,7 +7,7 @@ import { FaDownload } from "react-icons/fa6";
 import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import profilePic from "/profile-pic (4).png";
+import profilePic from "/profile-pic (4).webp";
 
 AOS.init();
 
