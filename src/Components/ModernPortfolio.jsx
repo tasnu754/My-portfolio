@@ -158,7 +158,7 @@ export const ModernPortfolio = () => {
       title: "Destiny Duos",
       description:
         "A modern matrimonial platform connecting people to find their life partners. Features include advanced filtering, real-time chat, profile matching algorithms, and secure payment integration.",
-      image: "/public/TestoBurger thumbnail.png",
+      image: "TestoBurger thumbnail.png",
       live: "https://nextjs-food-ordering.vercel.app",
       github: "https://github.com/tasnu754/Nextjs_Food_Ordering",
       serverGithub: "https://github.com/tasnu754/Nextjs_Food_ordering_Server",
@@ -431,7 +431,7 @@ export const ModernPortfolio = () => {
               <div className="absolute inset-0  rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img
                 // src="https://i.ibb.co/cYKJ5Dg/Web-Developer-Illustration-Facebook-Post.png"
-                src="/public/Tasnuva.webp"
+                src="Tasnuva.webp"
                 alt="About Me"
                 className="relative mx-auto rounded-xl shadow-2xl"
               />
