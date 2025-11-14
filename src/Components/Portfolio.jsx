@@ -597,7 +597,7 @@ export const Portfolio = () => {
           id="contact"
         >
           <div className="flex-1 space-y-4">
-            <h2 className="text-3xl text-center font-bold">Contact Me</h2>
+            <h2 className="text-3xl text-start font-bold">Contact Me</h2>
             <p className="text-xl w-[80%]">
               I&apos;m eager to discuss how my skills and enthusiasm align with
               the goals of your team. Whether you have an exciting project on
