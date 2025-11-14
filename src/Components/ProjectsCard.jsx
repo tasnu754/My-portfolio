@@ -6,7 +6,7 @@ const ProjectsCard = () => {
       title: "TestoBurger",
       description:
         "A full-stack food ordering web application with comprehensive features including cart management, order tracking, reviews, wishlist, and admin dashboard.",
-      image: "/public/TestoBurger_HomePage.webp",
+      image: "/TestoBurger_HomePage.webp",
       // image: "/TestoBurger_thumbnail.png",
       live: "https://nextjs-food-ordering.vercel.app",
       github: "https://github.com/tasnu754/Nextjs_Food_Ordering",
@@ -31,7 +31,7 @@ const ProjectsCard = () => {
       description:
         "A modern matrimonial platform connecting people to find their life partners. Features include advanced filtering, real-time chat, profile matching algorithms, and secure payment integration.",
       //   image: "https://i.ibb.co/VYkdyHW/Destiny-Duos.png",
-      image: "/public/DestinyDuos_HomePage.webp",
+      image: "/DestinyDuos_HomePage.webp",
       live: "https://destiny-duos.web.app",
       github: "https://github.com/tasnu754/Destiny-Duos-client",
       serverGithub: "https://github.com/tasnu754/Destiny-Duos-server",
@@ -51,7 +51,7 @@ const ProjectsCard = () => {
       description:
         "A food charity platform reducing food waste by connecting donors with those in need. Features donation tracking, real-time updates, and community engagement tools.",
       //   image: "https://i.ibb.co/1GRq4JY/Reduce-waste.png",
-      image: "/public/Reduce_HomePage.webp",
+      image: "/Reduce_HomePage.webp",
       live: "https://reduce-waste-together.web.app",
       github: "https://github.com/tasnu754/Reduce-Waste-Together-client",
       serverGithub: "https://github.com/tasnu754/Reduce-Waste-Together-server",
