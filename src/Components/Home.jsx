@@ -3,7 +3,7 @@ import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Education from "./Education";
 import Header from "./Header";
-import { ModernPortfolio } from "./ModernPortfolio";
+import { Portfolio } from "./Portfolio";
 import Navbar from "./Navbar";
 import Projects from "./Projects";
 import Skills from "./Skills";
@@ -20,7 +20,7 @@ const Home = () => {
           <Projects></Projects>
           <Contact></Contact>
         </div> */}
-      <ModernPortfolio></ModernPortfolio>
+      <Portfolio></Portfolio>
     </div>
   );
 };

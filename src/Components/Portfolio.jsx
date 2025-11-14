@@ -21,6 +21,7 @@ import {
   Rocket,
   Book,
   Award,
+  Link,
 } from "lucide-react";
 import { FaFacebookF, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa";
 import {
@@ -40,8 +41,9 @@ import { IoIosMail } from "react-icons/io";
 import { FiGithub } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import ProjectsCard from "./ProjectsCard";
 
-export const ModernPortfolio = () => {
+export const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollY, setScrollY] = useState(0);
@@ -153,62 +155,6 @@ export const ModernPortfolio = () => {
     ],
   };
 
-  const projects = [
-    {
-      title: "TestoBurger",
-      description:
-        "A full-stack food ordering web application with comprehensive features including cart management, order tracking, reviews, wishlist, and admin dashboard.",
-      image: "/TestoBurger_thumbnail.png",
-      live: "https://nextjs-food-ordering.vercel.app",
-      github: "https://github.com/tasnu754/Nextjs_Food_Ordering",
-      serverGithub: "https://github.com/tasnu754/Nextjs_Food_ordering_Server",
-      tech: [
-        "React",
-        "Next.js",
-        "Redux",
-        "RTK Query",
-        "Express.js",
-        "Node.js",
-        "MongoDB",
-        "Mongoose",
-        "JWT",
-        "Bcrypt",
-        "Tailwind CSS",
-      ],
-      gradient: "from-pink-500 to-purple-600",
-    },
-    {
-      title: "Destiny Duos",
-      description:
-        "A modern matrimonial platform connecting people to find their life partners. Features include advanced filtering, real-time chat, profile matching algorithms, and secure payment integration.",
-      image: "https://i.ibb.co/VYkdyHW/Destiny-Duos.png",
-      live: "https://destiny-duos.web.app",
-      github: "https://github.com/tasnu754/Destiny-Duos-client",
-      serverGithub: "https://github.com/tasnu754/Destiny-Duos-server",
-      tech: [
-        "React",
-        "Firebase",
-        "Node.js",
-        "MongoDB",
-        "Express",
-        "Tailwind CSS",
-      ],
-      gradient: "from-pink-500 to-purple-600",
-    },
-
-    {
-      title: "Reduce Waste Together",
-      description:
-        "A food charity platform reducing food waste by connecting donors with those in need. Features donation tracking, real-time updates, and community engagement tools.",
-      image: "https://i.ibb.co/1GRq4JY/Reduce-waste.png",
-      live: "https://reduce-waste-together.web.app",
-      github: "https://github.com/tasnu754/Reduce-Waste-Together-client",
-      serverGithub: "https://github.com/tasnu754/Reduce-Waste-Together-server",
-      tech: ["React", "Firebase", "Node.js", "Express", "MongoDB"],
-      gradient: "from-green-500 to-teal-600",
-    },
-  ];
-
   const education = [
     {
       degree: "BSc in Computer Science & Engineering",
@@ -263,7 +209,7 @@ export const ModernPortfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 Tasnuva
               </span>
             </div>
@@ -427,13 +373,13 @@ export const ModernPortfolio = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative group">
+            <div className="relative group ">
               <div className="absolute inset-0  rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img
                 // src="https://i.ibb.co/cYKJ5Dg/Web-Developer-Illustration-Facebook-Post.png"
                 src="/Tasnuva.webp"
                 alt="About Me"
-                className="relative mx-auto rounded-xl shadow-2xl"
+                className="relative mx-auto rounded-xl shadow-2xl h-64 md:h-[400px]  xl:h-[470px]"
               />
             </div>
 
@@ -516,12 +462,12 @@ export const ModernPortfolio = () => {
               <div
                 key={idx}
                 className={`relative mb-12 ${
-                  idx % 2 === 0 ? "md:!pr-1/2" : "md:!pl-1/2 !left-[46%]"
+                  idx % 2 === 0 ? "md:!pr-1/2" : " md:!pl-1/2 md:left-[46%]"
                 }`}
               >
                 <div
-                  className={`md:w-1/2 ${
-                    idx % 2 === 0 ? "md:!text-right md:!pr-12" : "md:!pl-12"
+                  className={`w-full md:w-1/2 ${
+                    idx % 2 === 0 ? "md:!text-right md:!pr-12" : " md:!pl-12"
                   }`}
                 >
                   <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition-all hover:shadow-lg hover:shadow-cyan-400/20 transform hover:scale-105">
@@ -641,87 +587,7 @@ export const ModernPortfolio = () => {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Featured{" "}
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Projects
-              </span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, idx) => (
-              <div
-                key={idx}
-                className="group relative bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cyan-400/20 hover:border-cyan-400/50 transition-all transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity`}
-                  ></div>
-                </div>
-
-                <div className="p-6 space-y-4">
-                  <h3 className="text-2xl font-bold text-cyan-400">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIdx) => (
-                      <span
-                        key={techIdx}
-                        className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-cyan-400 border border-cyan-400/20"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex flex-wrap gap-3 pt-4">
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg hover:shadow-lg hover:shadow-cyan-400/50 transition-all"
-                    >
-                      <ExternalLink size={16} />
-                      <span className="text-sm font-semibold">Live Demo</span>
-                    </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-4 py-2 border border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all"
-                    >
-                      <Github size={16} />
-                      <span className="text-sm font-semibold">Client</span>
-                    </a>
-                    <a
-                      href={project.serverGithub}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 px-4 py-2 border border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all"
-                    >
-                      <Github size={16} />
-                      <span className="text-sm font-semibold">Server</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ProjectsCard></ProjectsCard>
       </section>
 
       {/* Contact Section */}

@@ -1,74 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;500;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Roboto+Condensed:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Roboto+Condensed:wght@200;300;400;500;600;700;800&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Noto+Serif:wght@200;300;400;500;600;700;800&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Noto+Serif:wght@200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   scroll-behavior: smooth;
 }
 
+.btn-nav {
+  background-image: linear-gradient(
+    to right,
+    #000000 0%,
+    #0ef 51%,
+    #000000 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(253, 251, 251);
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
 
-          .btn-nav {
-            background-image: linear-gradient(to right, #000000 0%, #0ef  51%, #000000  100%);
-            margin: 10px;
-            padding: 15px 45px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: rgb(253, 251, 251);            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-            display: block;
-          }
+.btn-nav:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
 
-         
-          .btn-nav:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-          }
+.transparent {
+  background: transparent;
+}
 
+.header {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-position: center;
+}
 
-          .transparent{
-            background: transparent;
-          }
+.color {
+  color: #0ef;
+}
 
-          .header{
-             background: #0F2027;  /* fallback for old browsers */
-             background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-             background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-             background-position: center;
-            
+@media (max-width: 369px) {
+  .custom {
+    padding-top: 19px;
+  }
+}
 
-          }
+.projectImage::-webkit-scrollbar {
+  display: none;
+}
 
-          .color{
-            color: #0ef;
-          }
+.projectImage {
+  -ms-overflow-style: none;
+}
 
+.projectImage {
+  scrollbar-width: none;
+}
 
+.imageHoverScroll {
+  transition: transform 1s ease;
+}
 
+.imageHoverScroll:hover {
+  animation: scrollAnimation 15s linear infinite;
+}
 
-
-          @media (max-width: 369px) {
-            .custom {
-              padding-top: 19px;
-            }
-          }
-         
-
-          
-         
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
