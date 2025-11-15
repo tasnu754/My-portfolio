@@ -1,20 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
+import { Code, GitBranch, Code2 } from "lucide-react";
 import {
-  Code,
-  Database,
-  Palette,
-  Zap,
-  Globe,
-  GitBranch,
-  Layers,
-  Server,
-  Box,
-  Cpu,
-  Code2,
-} from "lucide-react";
-import {
-  SiCoffeescript,
   SiCplusplus,
   SiExpress,
   SiFirebase,
@@ -23,7 +10,6 @@ import {
   SiMongoose,
   SiMysql,
   SiNextdotjs,
-  SiNodedotjs,
   SiPhp,
   SiReact,
   SiRedux,
@@ -208,16 +194,16 @@ export default function SkillsSection() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {getFilteredSkills().map((skill, idx) => (
             <div
               key={idx}
-              className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2"
+              className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50   hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2"
             >
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:via-purple-500/10 group-hover:to-pink-500/10 rounded-2xl transition-all duration-500"></div>
 
-              <div className="relative z-10">
+              <div className="relative z-10 ">
                 {/* Icon and Name */}
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-3">
@@ -317,28 +303,28 @@ export default function SkillsSection() {
         </div>
 
         {/* Stats Summary */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
-            <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 ">
+          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-400">
+            <div className="text-4xl font-bold  bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
               {skills.frontend.length +
                 skills.backend.length +
                 skills.other.length}
             </div>
             <div className="text-gray-400 text-sm">Total Skills</div>
           </div>
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
+          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-400">
             <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-2">
               {skills.frontend.length}
             </div>
             <div className="text-gray-400 text-sm">Frontend</div>
           </div>
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
+          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-400">
             <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">
               {skills.backend.length}
             </div>
             <div className="text-gray-400 text-sm">Backend</div>
           </div>
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
+          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-400">
             <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-2">
               {skills.other.length}
             </div>
