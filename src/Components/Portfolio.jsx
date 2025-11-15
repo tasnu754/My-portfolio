@@ -632,7 +632,7 @@ export const Portfolio = () => {
                 <button
                   type="submit"
                   value="Send"
-                  className="flex items-center space-x-2 px-4 py-2 border w-[50%] text-xl font-bold text-cyan-400 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all justify-center text-center"
+                  className="flex items-center space-x-2 px-4 py-2 border w-[50%] text-xl font-bold text-cyan-400 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all justify-center text-center"
                 >
                   Submit
                 </button>
