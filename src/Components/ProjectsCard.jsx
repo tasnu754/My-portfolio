@@ -60,7 +60,7 @@ const ProjectsCard = () => {
     },
   ];
   return (
-    <div className="container mx-auto px-5 md:px-20">
+    <div className="container !mx-auto px-5 md:px-20 ">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
           Featured{" "}
@@ -71,7 +71,7 @@ const ProjectsCard = () => {
         <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
       </div>
 
-      <div className="grid  grid-cols-1 lg:grid-cols-3 gap-7 md:ml-0 ml-10">
+      <div className="grid  grid-cols-1 lg:grid-cols-3 gap-7 md:ml-0 ">
         {projects?.slice(0, 3).map((p) => (
           <div
             data-aos="zoom-in"

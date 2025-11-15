@@ -22,9 +22,12 @@ import {
   Book,
   Award,
   Link,
+  Code2,
 } from "lucide-react";
 import { FaFacebookF, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa";
 import {
+  SiCodechef,
+  SiCodeforces,
   SiExpress,
   SiInstagram,
   SiJavascript,
@@ -42,6 +45,7 @@ import { FiGithub } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import ProjectsCard from "./ProjectsCard";
+import SkillsSection from "./SkillsSection";
 
 export const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +53,6 @@ export const Portfolio = () => {
   const [scrollY, setScrollY] = useState(0);
   const [typedText, setTypedText] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
-  const contactFormRef = useRef(null);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -199,22 +202,24 @@ export const Portfolio = () => {
       </div>
 
       {/* Navigation */}
+      {/* Navigation - Updated for better mobile */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrollY > 50
-            ? "bg-slate-900/90 backdrop-blur-md shadow-lg"
+            ? "bg-slate-900/95 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 md:h-20">
             <div className="flex items-center">
-              <span className="text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 Tasnuva
               </span>
             </div>
 
-            <div className="hidden md:flex space-x-8">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-6 lg:space-x-8">
               {[
                 "home",
                 "about",
@@ -226,7 +231,7 @@ export const Portfolio = () => {
                 <a
                   key={item}
                   href={`#${item}`}
-                  className={`capitalize text-xl font-bold transition-all duration-300 hover:text-cyan-400 ${
+                  className={`capitalize text-lg lg:text-xl font-bold transition-all duration-300 hover:text-cyan-400 ${
                     activeSection === item
                       ? "text-cyan-400 font-semibold"
                       : "text-gray-300"
@@ -237,18 +242,20 @@ export const Portfolio = () => {
               ))}
             </div>
 
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-white"
+              className="md:hidden text-white p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
+        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-md">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+            <div className="px-4 py-3 space-y-3">
               {[
                 "home",
                 "about",
@@ -261,7 +268,7 @@ export const Portfolio = () => {
                   key={item}
                   href={`#${item}`}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block px-3 py-2 capitalize hover:text-cyan-400 transition-colors"
+                  className="block px-3 py-3 capitalize text-lg hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors border-b border-cyan-400/10"
                 >
                   {item}
                 </a>
@@ -302,37 +309,50 @@ export const Portfolio = () => {
               <p className="text-lg text-gray-300 leading-relaxed">
                 With expertise in React, Redux,RTK query, Next.js, Node.js,
                 Express.js, MongoDB, Mongoose and MySQL. Building modern,
-                responsive web applications with cutting-edge technologies.
+                responsive web applications with cutting-edge technologies. I
+                also have strong DSA, problem-solving skills, and advanced
+                SQL/database knowledge.
               </p>
 
               <div className="flex items-center space-x-4">
                 {[
                   {
-                    icon: <Facebook size={20} />,
-                    href: "https://www.facebook.com/tasnuva.islam4",
-                  },
-                  {
                     icon: <Linkedin size={20} />,
                     href: "https://www.linkedin.com/in/tasnuva-islam-mila-2105462a4",
+                    name: "LinkedIn",
                   },
                   {
                     icon: <Github size={20} />,
                     href: "https://github.com/tasnu754",
+                    name: "GitHub",
                   },
                   {
-                    icon: <Instagram size={20} />,
-                    href: "https://www.instagram.com/tasnuva_islam754/",
+                    icon: <SiCodeforces size={20} />,
+                    href: "https://codeforces.com/profile/Tasnuva_Islam",
+                    name: "Codeforces",
+                  },
+                  {
+                    icon: <SiCodechef size={20} />,
+                    href: "https://www.codechef.com/users/tasnuislam754",
+                    name: "CodeChef",
                   },
                 ].map((social, idx) => (
-                  <a
-                    key={idx}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-400/50"
-                  >
-                    {social.icon}
-                  </a>
+                  <div key={idx} className="relative group">
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-400/50"
+                    >
+                      {social.icon}
+                    </a>
+                    {/* Simple Tooltip */}
+                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                      <span className="bg-slate-900 text-cyan-400 text-xs py-1 px-2 rounded-md border border-cyan-400/50">
+                        {social.name}
+                      </span>
+                    </div>
+                  </div>
                 ))}
               </div>
 
@@ -385,13 +405,15 @@ export const Portfolio = () => {
 
             <div className="space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I am a recent BSc in Computer Science and Engineering graduate.
-                I&apos;ve spent the last two years actively building my skills
-                to become a full-stack web developer. I have a strong foundation
-                in modern front-end development, specializing in Nextjs, React,
-                Redux Toolkit, Tailwind CSS, Bootstrap, and Material-UI, while
-                my back-end expertise covers Node.js, and Express.js along with
-                experience in databases like MongoDB, Mongoose and MySQL.
+                I am a recent BSc in Computer Science and Engineering graduate
+                with 2 years of dedicated self-learning in full-stack web
+                development. My expertise includes modern front-end technologies
+                like Next.js, React, Redux Toolkit, and Tailwind CSS,
+                complemented by back-end skills in Node.js, Express.js, MongoDB
+                with Mongoose, and MySQL. I actively participate in competitive
+                programming with 200+ problems solved on Codeforces and regular
+                contest participation on CodeChef, strengthening my
+                problem-solving and DSA skills.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
@@ -403,14 +425,24 @@ export const Portfolio = () => {
                     icon: <Rocket />,
                   },
                   {
-                    label: "DOB",
-                    value: "December 31, 2001",
-                    icon: <Calendar />,
+                    label: "Specialization",
+                    value: "Full-Stack Web",
+                    icon: <Code2 />,
+                  },
+                  {
+                    label: "Codeforces",
+                    value: "200+ Problems Solved",
+                    icon: <SiCodeforces />,
                   },
                   {
                     label: "Location",
                     value: "Dhaka, Bangladesh",
                     icon: <Globe />,
+                  },
+                  {
+                    label: "Email",
+                    value: "tasnuvamarziya60@gmail.com",
+                    icon: <Mail />,
                   },
                 ].map((item, idx) => (
                   <div
@@ -423,17 +455,11 @@ export const Portfolio = () => {
                         {item.label}
                       </span>
                     </div>
-                    <p className="text-gray-300 text-sm">{item.value}</p>
+                    <p className="text-gray-300 text-sm break-words">
+                      {item.value}
+                    </p>
                   </div>
                 ))}
-              </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-cyan-400/20">
-                <div className="flex items-center space-x-2 text-cyan-400 mb-2">
-                  <Mail size={20} />
-                  <span className="text-sm font-semibold">Email</span>
-                </div>
-                <p className="text-gray-300">tasnuvamarziya60@gmail.com</p>
               </div>
             </div>
           </div>
@@ -441,7 +467,7 @@ export const Portfolio = () => {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-20 px-4 relative">
+      <section id="education" className="py-20 px-6 md:px-4 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -497,108 +523,31 @@ export const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              My{" "}
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Skills
-              </span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 flex items-center space-x-2">
-                <Code className="text-cyan-400" />
-                <span>Frontend</span>
-              </h3>
-              <div className="space-y-6">
-                {skills.frontend.map((skill, idx) => (
-                  <div key={idx} className="group">
-                    <div className="flex justify-between mb-2">
-                      <span className=" flex items-center gap-2 font-semibold text-gray-300">
-                        {skill.icon} {skill.name}
-                      </span>
-                      <span className="text-cyan-400">{skill.level}%</span>
-                    </div>
-                    <div className="h-3 bg-slate-800 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full transition-all duration-1000 group-hover:shadow-lg group-hover:shadow-cyan-400/50"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-6 flex items-center space-x-2">
-                <Database className="text-cyan-400" />
-                <span>Backend</span>
-              </h3>
-              <div className="space-y-6">
-                {skills.backend.map((skill, idx) => (
-                  <div key={idx} className="group">
-                    <div className="flex justify-between mb-2">
-                      <span className="font-semibold flex items-center gap-2 text-gray-300">
-                        {skill.icon} {skill.name}
-                      </span>
-                      <span className="text-cyan-400">{skill.level}%</span>
-                    </div>
-                    <div className="h-3 bg-slate-800 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full transition-all duration-1000 group-hover:shadow-lg group-hover:shadow-cyan-400/50"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Other Skills</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {skills.other.map((skill, idx) => (
-                <div key={idx} className="group">
-                  <div className="flex justify-between mb-2">
-                    <span className="font-semibold text-gray-300">
-                      {skill.name}
-                    </span>
-                    <span className="text-cyan-400">{skill.level}%</span>
-                  </div>
-                  <div className="h-3 bg-slate-800 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full transition-all duration-1000 group-hover:shadow-lg group-hover:shadow-cyan-400/50"
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <SkillsSection></SkillsSection>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 relative">
+      <section id="projects" className="py-20  relative">
         <ProjectsCard></ProjectsCard>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 relative">
+      <section id="contact" className="py-20 px-6 md:px-4 relative">
         <div
           className=" max-w-7xl mx-auto mt-48 mb-24 lg:flex gap-4 space-y-10"
           id="contact"
         >
           <div className="flex-1 space-y-4">
-            <h2 className="text-3xl text-start font-bold">Contact Me</h2>
-            <p className="text-xl w-[80%]">
+            <div className="text-start mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Contact{" "}
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  Me
+                </span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r text-start from-cyan-400 to-purple-600 "></div>
+            </div>
+
+            <p className="text-xl md:w-[80%] ">
               I&apos;m eager to discuss how my skills and enthusiasm align with
               the goals of your team. Whether you have an exciting project on
               the horizon or need a proactive and dedicated team member,
@@ -609,14 +558,6 @@ export const Portfolio = () => {
               tasnuvamarziya60@gmail.com
             </div>
             <div className="flex justify-start items-center gap-2 text-2xl transparent ">
-              <a
-                href="https://www.facebook.com/tasnuva.islam4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[35px] h-[35px]  flex justify-center items-center rounded-md border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
-              >
-                <FaFacebookF></FaFacebookF>
-              </a>
               <a
                 href="https://www.linkedin.com/in/tasnuva-islam-mila-2105462a4"
                 target="_blank"
@@ -634,12 +575,20 @@ export const Portfolio = () => {
                 <FiGithub></FiGithub>
               </a>
               <a
-                href="https://www.instagram.com/tasnuva_islam754/"
+                href="https://codeforces.com/profile/Tasnuva_Islam"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" w-[35px] h-[35px] flex justify-center items-center rounded-md border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
               >
-                <SiInstagram></SiInstagram>
+                <SiCodeforces></SiCodeforces>
+              </a>
+              <a
+                href="https://www.codechef.com/users/tasnuislam754"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" w-[35px] h-[35px] flex justify-center items-center rounded-md border-2 border-[#0ef] text-[#0ef] hover:bg-[#0ef] hover:text-black hover:shadow-md hover:shadow-cyan-400"
+              >
+                <SiCodechef></SiCodechef>
               </a>
             </div>
           </div>
@@ -676,11 +625,15 @@ export const Portfolio = () => {
                 name="message"
                 rows={5}
                 cols={100}
-                className="bg-black p-2 rounded-md w-full"
+                className="bg-white text-black p-2 rounded-md w-full"
                 placeholder="Message"
               ></textarea>
-              <div className="pt-2">
-                <button type="submit" value="Send" className="btn-nav w-full">
+              <div className="pt-2 flex justify-center ">
+                <button
+                  type="submit"
+                  value="Send"
+                  className="flex items-center space-x-2 px-4 py-2 border w-[50%] text-xl font-bold text-cyan-400 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all justify-center text-center"
+                >
                   Submit
                 </button>
               </div>
