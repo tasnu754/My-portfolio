@@ -304,7 +304,7 @@ export default function SkillsSection() {
 
         {/* Stats Summary */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 ">
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-400">
+          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-500/50">
             <div className="text-4xl font-bold  bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
               {skills.frontend.length +
                 skills.backend.length +
@@ -312,19 +312,19 @@ export default function SkillsSection() {
             </div>
             <div className="text-gray-400 text-sm">Total Skills</div>
           </div>
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-400">
+          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-500/50">
             <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-2">
               {skills.frontend.length}
             </div>
             <div className="text-gray-400 text-sm">Frontend</div>
           </div>
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-400">
+          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-500/50">
             <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">
               {skills.backend.length}
             </div>
             <div className="text-gray-400 text-sm">Backend</div>
           </div>
-          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-400">
+          <div className="text-center p-6 bg-slate-800/30 rounded-xl border border-cyan-500/50">
             <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-2">
               {skills.other.length}
             </div>
