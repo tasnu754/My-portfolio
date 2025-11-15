@@ -307,7 +307,7 @@ export const Portfolio = () => {
               </div>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                With expertise in React, Redux,RTK query, Next.js, Node.js,
+                With expertise in React, Redux, RTK query, Next.js, Node.js,
                 Express.js, MongoDB, Mongoose and MySQL. Building modern,
                 responsive web applications with cutting-edge technologies. I
                 also have strong DSA, problem-solving skills, and advanced
