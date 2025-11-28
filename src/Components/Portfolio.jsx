@@ -281,7 +281,7 @@ export const Portfolio = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center px-20 lg:px-4 pt-20"
+        className="relative min-h-screen flex items-center justify-center px-4 pt-20"
       >
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid md:grid-cols-2 gap-12 items-center">
