@@ -86,8 +86,8 @@ export const Portfolio = () => {
   const titles = [
     "Software Engineer",
     "Full stack Developer",
-    "Frontend Developer",
     "MERN Stack Developer",
+    "Frontend Developer",
   ];
   const currentTitle = titles[titleIndex];
 
