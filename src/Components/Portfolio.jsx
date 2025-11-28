@@ -311,8 +311,8 @@ export const Portfolio = () => {
                 With expertise in React, Redux, RTK query, Next.js, Node.js,
                 Express.js, MongoDB, Mongoose and MySQL. Building modern,
                 responsive web applications with cutting-edge technologies. I
-                also have strong DSA, problem-solving skills, and advanced
-                SQL/database knowledge.
+                also have strong DSA, problem-solving skills, advanced
+                SQL/database and OOP knowledge.
               </p>
 
               <div className="flex items-center space-x-4">
@@ -393,14 +393,14 @@ export const Portfolio = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative group ">
               <div className="absolute inset-0  rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <img
                 // src="https://i.ibb.co/cYKJ5Dg/Web-Developer-Illustration-Facebook-Post.png"
                 src="/Tasnuva.webp"
                 alt="About Me"
-                className="relative mx-auto rounded-xl shadow-2xl h-64 md:h-[400px]  xl:h-[470px]"
+                className="relative mx-auto rounded-xl shadow-2xl h-64 md:h-[400px]  xl:h-[500px]"
               />
             </div>
 
@@ -411,10 +411,11 @@ export const Portfolio = () => {
                 development. My expertise includes modern front-end technologies
                 like Next.js, React, Redux Toolkit, and Tailwind CSS,
                 complemented by back-end skills in Node.js, Express.js, MongoDB
-                with Mongoose, and MySQL. I actively participate in competitive
-                programming with 200+ problems solved on Codeforces and regular
-                contest participation on CodeChef, strengthening my
-                problem-solving and DSA skills.
+                with Mongoose, and MySQL. <br /> I actively participate in
+                competitive programming with 200+ problems solved on Codeforces
+                and regular contest participation on CodeChef, strengthening my
+                problem-solving and DSA skills. I also have a strong
+                understanding of Object-Oriented Programming (OOP) principles.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
