@@ -514,7 +514,7 @@ export const Portfolio = () => {
           </div>
 
           {/* Experience Section */}
-          <div className="space-y-12">
+          <div className="space-y-12 ">
             {experiences.map((exp, idx) => (
               <div
                 key={idx}

@@ -55,7 +55,14 @@ const ProjectsCard = () => {
       live: "https://reduce-waste-together.web.app",
       github: "https://github.com/tasnu754/Reduce-Waste-Together-client",
       serverGithub: "https://github.com/tasnu754/Reduce-Waste-Together-server",
-      tech: ["React", "Firebase", "Node.js", "Express", "MongoDB"],
+      tech: [
+        "React",
+        "Tailwind CSS",
+        "Firebase",
+        "Node.js",
+        "Express",
+        "MongoDB",
+      ],
       gradient: "from-green-500 to-teal-600",
     },
   ];
