@@ -54,12 +54,12 @@ export default function SkillsSection() {
         icon: <SiTailwindcss size={24} />,
         color: "from-teal-400 to-cyan-500",
       },
-      // {
-      //   name: "Bootstrap",
-      //   level: 88,
-      //   icon: <FaBootstrap size={24} />,
-      //   color: "from-teal-400 to-cyan-500",
-      // },
+      {
+        name: "Bootstrap",
+        level: 88,
+        icon: <FaBootstrap size={24} />,
+        color: "from-teal-400 to-cyan-500",
+      },
       {
         name: "Material-UI",
         level: 88,
