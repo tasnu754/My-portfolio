@@ -180,6 +180,36 @@ export const Portfolio = () => {
     },
   ];
 
+  const experiences = [
+    {
+      role: "Frontend Engineer Intern",
+      company: "6sense HQ",
+      period: "Dec 2024 – Present",
+      type: "On-site / Agile Team",
+      highlights: [
+        "Working on a real production-level web application following Scrum & sprint-based development.",
+        "Developing high-performance, responsive UI using React.js and Typescript.",
+        "Actively participating in sprint planning, daily stand-ups, and sprint reviews.",
+        "Optimizing frontend performance and load speed with efficient component design.",
+        "Collaborating with backend engineers and designers to deliver features on time.",
+        "Fixing UI bugs and improving UX based on sprint feedback and testing.",
+      ],
+      tech: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux/RTK Query",
+        "Axios",
+        "Tanstack Query",
+        "React Hook Form",
+        "ZOD Validation",
+        "Figma",
+        "Agile / Scrum",
+      ],
+    },
+  ];
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(
@@ -224,6 +254,7 @@ export const Portfolio = () => {
               {[
                 "home",
                 "about",
+                "experience",
                 "education",
                 "skills",
                 "projects",
@@ -260,6 +291,7 @@ export const Portfolio = () => {
               {[
                 "home",
                 "about",
+                "experience",
                 "education",
                 "skills",
                 "projects",
@@ -308,11 +340,11 @@ export const Portfolio = () => {
               </div>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                With expertise in React, Redux, RTK query, Next.js, Node.js,
-                Express.js, MongoDB, Mongoose and MySQL. Building modern,
-                responsive web applications with cutting-edge technologies. I
-                also have strong DSA, problem-solving skills, advanced
-                SQL/database and OOP knowledge.
+                With expertise in React, Redux, RTK query, Next.js, TypeScript,
+                Node.js, Express.js, MongoDB, Mongoose and MySQL. Building
+                modern, responsive web applications with cutting-edge
+                technologies. I also have strong DSA, problem-solving skills,
+                advanced SQL/database and OOP knowledge.
               </p>
 
               <div className="flex items-center space-x-4">
@@ -464,6 +496,70 @@ export const Portfolio = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" className="py-20 px-6 relative">
+        <div className="max-w-7xl mx-auto">
+          {/* Title */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Work{" "}
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                Experience
+              </span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+          </div>
+
+          {/* Experience Section */}
+          <div className="space-y-12">
+            {experiences.map((exp, idx) => (
+              <div
+                key={idx}
+                className="relative bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/50 transition-all hover:shadow-lg hover:shadow-cyan-400/20"
+              >
+                {/* Header */}
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-cyan-400">
+                      {exp.role}
+                    </h3>
+                    <p className="text-lg text-gray-300">{exp.company}</p>
+                  </div>
+                  <div className="mt-3 md:mt-0 text-md text-gray-400">
+                    <span className="block">{exp.period}</span>
+                    <span className="block">{exp.type}</span>
+                  </div>
+                </div>
+
+                {/* Highlights */}
+                <ul className="space-y-3 mb-6">
+                  {exp.highlights.map((point, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <ChevronRight className="text-cyan-400 mt-1" size={18} />
+                      <p className="text-gray-300">{point}</p>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-3">
+                  {exp.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 text-sm rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/30"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Glow Effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400/5 to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity pointer-events-none"></div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

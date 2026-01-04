@@ -14,6 +14,7 @@ import {
   SiReact,
   SiRedux,
   SiTailwindcss,
+  SiTypescript,
   SiVercel,
 } from "react-icons/si";
 import { FaBootstrap, FaJava, FaNodeJs } from "react-icons/fa";
@@ -36,6 +37,12 @@ export default function SkillsSection() {
         color: "from-slate-400 to-slate-600",
       },
       {
+        name: "TypeScript",
+        level: 80,
+        icon: <SiTypescript size={24} />,
+        color: "from-slate-400 to-slate-600",
+      },
+      {
         name: "Redux/RTK",
         level: 85,
         icon: <SiRedux size={24} />,
@@ -47,12 +54,12 @@ export default function SkillsSection() {
         icon: <SiTailwindcss size={24} />,
         color: "from-teal-400 to-cyan-500",
       },
-      {
-        name: "Bootstrap",
-        level: 88,
-        icon: <FaBootstrap size={24} />,
-        color: "from-teal-400 to-cyan-500",
-      },
+      // {
+      //   name: "Bootstrap",
+      //   level: 88,
+      //   icon: <FaBootstrap size={24} />,
+      //   color: "from-teal-400 to-cyan-500",
+      // },
       {
         name: "Material-UI",
         level: 88,
