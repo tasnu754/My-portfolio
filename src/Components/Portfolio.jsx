@@ -157,6 +157,7 @@ export const Portfolio = () => {
       { name: "C++", level: 90 },
       { name: "C Language", level: 80 },
       { name: "PHP", level: 60 },
+      { name: "Jira", level: 95 },
     ],
   };
 
