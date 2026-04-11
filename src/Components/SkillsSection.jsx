@@ -127,7 +127,7 @@ export default function SkillsSection() {
       },
       {
         name: "PHP",
-        level: 65,
+        level: 50,
         icon: <SiPhp size={24} />,
         color: "from-pink-400 to-rose-500",
       },
